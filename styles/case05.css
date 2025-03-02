@@ -1,0 +1,48 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.image-container {
+    width: 500%; 
+    height: 100%;
+    display: flex;
+    position: relative;
+    animation: move-image 20s ease-in-out infinite;
+}
+
+.image-container > .image {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.image-1 { background-image: url("/assets/case05-images/image01.jpg"); }
+.image-2 { background-image: url("/assets/case05-images/image02.jpg"); }
+.image-3 { background-image: url("/assets/case05-images/image03.jpg"); }
+.image-4 { background-image: url("/assets/case05-images/image04.jpg"); }
+
+@keyframes move-image {
+    0%, 10% { transform: translateX(-300vw); }
+    15%, 25% { transform: translateX(-200vw); } 
+    30%, 40% { transform: translateX(-100vw); }
+    45%, 55% { transform: translateX(0); } 
+    60%, 70% { transform: translateX(-100vw); } 
+    
+    71%, 75% { transform: translateX(-100vw); } 
+
+    80%, 85% { transform: translateX(-200vw); } 
+    90%, 95% { transform: translateX(-300vw); }
+    100% { transform: translateX(-300vw); }
+}
